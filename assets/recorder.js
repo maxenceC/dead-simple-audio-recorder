@@ -1,4 +1,4 @@
-var WORKER_PATH = 'recorderWorker.js';
+var WORKER_PATH = 'https://rawgit.com/maxenceC/dead-simple-audio-recorder/gh-pages/assets/recorderWorker.js';
 
 var Recorder = function (source, cfg) {
     var config = cfg || {};
