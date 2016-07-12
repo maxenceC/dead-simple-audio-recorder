@@ -42,28 +42,26 @@
         called synchonously, the second one is async.</p>
 
 
-    <h2> Usage
-        <h2>
+    <h2> Usage </h2>
 
+    <code>var audioRecorder = new AudioRecorder();</code>
+    <br>
+    <br>
+    <code>audioRecorder.startRecording();</code>
 
-            <code>var audioRecorder = new AudioRecorder();</code>
-            <br>
-            <br>
-            <code>audioRecorder.startRecording();</code>
+    <br>
+    <p>//Sync usage with .wav</p>
+    <br>
+    <code> audioRecorder.stopRecording('wav', 'wavFile');</code>
+    <br>
+    <br>
 
-            <br>
-            <p>//Sync usage with .wav</p>
-            <br>
-            <code> audioRecorder.stopRecording('wav', 'wavFile');</code>
-            <br>
-            <br>
+    <p>// Async usage with ArrayBuffer</p>
+    <br>
+    <code>audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, result) {</code>
+    <p> // result contains the audio file input Array buffer</p>
 
-            <p>// Async usage with ArrayBuffer</p>
-            <br>
-            <code>audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, result) {</code>
-            <p> // result contains the audio file input Array buffer</p>
-
-            <code>});</code>
+    <code>});</code>
 </div>
 
 </body>
