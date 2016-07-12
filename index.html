@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dead simple audio recorder</title>
-  <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
-  <script src="demo.js"></script>
-  <style>
-    body{
-      text-align: center;
-      padding: 30px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Dead simple audio recorder</title>
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="main.js"></script>
+    <style>
+        body {
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
 </head>
 <body>
-  <div>
+<a href="https://github.com/maxenceC/dead-simple-audio-recorder"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+<div>
     <button id="start-recording">Start recording</button>
     <button id="stop-recording">Stop recording</button>
-  </div>
+</div>
+
+<br><br>
+<div>
+    <h1>Dead simple audio recorder</h1>
+
+    <p>Record audio input from the user microphone, export to .wav or ArrayBuffer</p>
+
+    <h2>Methods</h2>
+
+    <p> AudioRecorder has 2 public methods : <i> startRecording()</i> and <i>stopRecording(format, filename,
+        callback)</i></p>
+
+
+    <p>startRecording is synchronous and doesnt take any arguments.</p>
+
+    <p>stopRecording format argument accept 2 formats : <i>'wav'</i> or <i>'Uint8Array'</i>, the first one must be
+        called synchonously, the second one is async.</p>
+
+
+    <h2> Usage <h2>
+
+
+        <code>var audioRecorder = new AudioRecorder();</code>
+        <br>
+        <code>audioRecorder.startRecording();</code>
+
+        <br>
+        <code>//Sync usage with .wav</code>
+        <br>
+        <code> audioRecorder.stopRecording('wav', 'wavFile');</code>
+
+
+        <code>// Async usage with ArrayBuffer</code>
+        <br>
+        <code>audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, result) {
+            // result contains the audio file input Array buffer
+            });</code>
+</div>
+
 </body>
 </html>
