@@ -13,7 +13,11 @@
     </style>
 </head>
 <body>
-<a href="https://github.com/maxenceC/dead-simple-audio-recorder"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+<a href="https://github.com/maxenceC/dead-simple-audio-recorder"><img
+        style="position: absolute; top: 0; right: 0; border: 0;"
+        src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67"
+        alt="Fork me on GitHub"
+        data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 <div>
     <button id="start-recording">Start recording</button>
     <button id="stop-recording">Stop recording</button>
@@ -27,34 +31,39 @@
 
     <h2>Methods</h2>
 
-    <p> AudioRecorder has 2 public methods : <i> startRecording()</i> and <i>stopRecording(format, filename,
-        callback)</i></p>
+    <p> AudioRecorder has 2 public methods : <code> startRecording()</code> and <code>stopRecording(format, filename,
+        callback)</code></p>
 
 
     <p>startRecording is synchronous and doesnt take any arguments.</p>
 
-    <p>stopRecording format argument accept 2 formats : <i>'wav'</i> or <i>'Uint8Array'</i>, the first one must be
+    <p>stopRecording format argument accept 2 formats : <code>'wav'</code> or <code>'Uint8Array'</code>, the first one
+        must be
         called synchonously, the second one is async.</p>
 
 
-    <h2> Usage <h2>
+    <h2> Usage
+        <h2>
 
 
-        <code>var audioRecorder = new AudioRecorder();</code>
-        <br>
-        <code>audioRecorder.startRecording();</code>
+            <code>var audioRecorder = new AudioRecorder();</code>
+            <br>
+            <br>
+            <code>audioRecorder.startRecording();</code>
 
-        <br>
-        <code>//Sync usage with .wav</code>
-        <br>
-        <code> audioRecorder.stopRecording('wav', 'wavFile');</code>
+            <br>
+            <p>//Sync usage with .wav</p>
+            <br>
+            <code> audioRecorder.stopRecording('wav', 'wavFile');</code>
+            <br>
+            <br>
 
+            <p>// Async usage with ArrayBuffer</p>
+            <br>
+            <code>audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, result) {</code>
+            <p> // result contains the audio file input Array buffer</p>
 
-        <code>// Async usage with ArrayBuffer</code>
-        <br>
-        <code>audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, result) {
-            // result contains the audio file input Array buffer
-            });</code>
+            <code>});</code>
 </div>
 
 </body>
