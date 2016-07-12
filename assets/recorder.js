@@ -1,4 +1,4 @@
-var WORKER_PATH = '/assets/recorderWorker.js';
+var WORKER_PATH = 'recorderWorker.js';
 
 var Recorder = function (source, cfg) {
     var config = cfg || {};
