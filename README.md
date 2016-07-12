@@ -33,6 +33,12 @@ audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, re
 
 * Audio recording:
   * [mattdiamond/Recorderjs](https://github.com/mattdiamond/Recorderjs)
+  
+  
+  
+## Todo
+
+- package for npm
 
 
 

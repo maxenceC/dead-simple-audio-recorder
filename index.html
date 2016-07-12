@@ -19,8 +19,8 @@
         alt="Fork me on GitHub"
         data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 <div>
-    <button id="start-recording">Start recording</button>
-    <button id="stop-recording">Stop recording</button>
+    <button style="height: 24px" id="start-recording">Start recording</button>
+    <button style="height: 24px" id="stop-recording">Stop recording</button>
 </div>
 
 <br><br>
@@ -44,24 +44,7 @@
 
     <h2> Usage </h2>
 
-    <code>var audioRecorder = new AudioRecorder();</code>
-    <br>
-    <br>
-    <code>audioRecorder.startRecording();</code>
-
-    <br>
-    <p>//Sync usage with .wav</p>
-    <br>
-    <code> audioRecorder.stopRecording('wav', 'wavFile');</code>
-    <br>
-    <br>
-
-    <p>// Async usage with ArrayBuffer</p>
-    <br>
-    <code>audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, result) {</code>
-    <p> // result contains the audio file input Array buffer</p>
-
-    <code>});</code>
+    <div><img height="240" src="assets/usage.png"></div>
 </div>
 
 </body>
