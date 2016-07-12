@@ -1,6 +1,7 @@
-/**
- * Created by maxencecornet on 06/10/15.
- */
+
+//++++++++++  -----------------  ++++++++++//
+//++++++++++    Audio Recorder   ++++++++++//
+//++++++++++  -----------------  ++++++++++//
 
 AudioRecorder = function () {
     this.mediaStream = null;
@@ -92,9 +93,9 @@ AudioRecorder.prototype._record = function (context) {
     });
 };
 
-/*
- Click Events
- */
+//++++++++++  -----------------  ++++++++++//
+//++++++++++  Demo click events  ++++++++++//
+//++++++++++  -----------------  ++++++++++//
 
 (function () {
     $(document).ready(init);
@@ -113,9 +114,9 @@ AudioRecorder.prototype._record = function (context) {
 })();
 
 
-/*
- Recorder
- */
+//++++++++++  -----------------  ++++++++++//
+//++++++++  mattdiamond/Recorderjs  ++++++++//
+//++++++++++  -----------------  ++++++++++//
 
 var WORKER_PATH = 'recorderWorker.js';
 
