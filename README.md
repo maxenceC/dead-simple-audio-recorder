@@ -38,7 +38,8 @@ audioRecorder.stopRecording('Uint8Array', 'ArrayBufferFile', function (error, re
   
 ## Todo
 
-- package for npm
+- Package for npm
+- Generate download link for firefox
 
 
 
